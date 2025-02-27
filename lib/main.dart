@@ -1,4 +1,5 @@
-import 'package:coffee_card/home_page.dart';
+import 'package:coffee_card/pages/home_page.dart';
+import 'package:coffee_card/pages/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -8,12 +9,15 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // double pi = 3.14;
-    // bool isMale = true;
-
-    // var day = "Saturday";
-    // const pie = 3.14;
-
-    return MaterialApp(home: HomePage());
+    return MaterialApp(
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      darkTheme: ThemeData(brightness: Brightness.dark),
+      routes: {
+        "/": (context) => LogInpage(),
+        "/home": (context) => HomePage(),
+        "/login": (context) => LogInpage(),
+      },
+    );
   }
 }
