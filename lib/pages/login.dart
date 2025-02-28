@@ -13,7 +13,6 @@ class LogInpage extends StatelessWidget {
         SizedBox(
           height: 20.0,
         ),
-
         Text("Welcome",
           style: TextStyle(
           fontSize: 24,
