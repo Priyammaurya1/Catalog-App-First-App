@@ -19,7 +19,6 @@ class _LogInpageState extends State<LogInpage> {
           children: [
             Image.asset("assets/login.png", fit: BoxFit.cover, height: 300),
             SizedBox(height: 20.0),
-
             Text(
               "Welcome $name",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
@@ -43,7 +42,7 @@ class _LogInpageState extends State<LogInpage> {
                     },
                   ),
                   TextFormField(
-                    obscureText: true,
+                    obscureText: true,            // to make text into **** for privacy.
                     decoration: InputDecoration(
                       hintText: "Enter Password",
                       labelText: "Password",
