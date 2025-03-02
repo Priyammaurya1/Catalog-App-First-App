@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'utils/routes.dart';
 
+
 void main() {
   runApp(MyApp());
 }
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false, // to remove debug banner that appears at the corner of the app.
       darkTheme: ThemeData(brightness: Brightness.dark),
-      // initialRoute: "/home",
+      initialRoute: MyRoutes.homeRoutes,
       routes: {
         "/": (context) => LogInpage(),
         MyRoutes.homeRoutes: (context) => HomePage(),
