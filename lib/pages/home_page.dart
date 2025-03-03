@@ -10,8 +10,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFFF9000), 
-        title: Text('Catalog App'),
+        title: Text(
+          'Catalog App',
+          ),
       ),
       body: Center(child: Container(child: Text('welcome home $days $name'))),
       drawer: MyDrawer(),
