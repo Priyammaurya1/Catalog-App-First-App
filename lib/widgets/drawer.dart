@@ -16,7 +16,7 @@ class MyDrawer extends StatelessWidget {
             DrawerHeader(
               padding: EdgeInsets.zero,
               margin: EdgeInsets.zero,
-              child: UserAccountsDrawerHeader(
+              child: UserAccountsDrawerHeader( 
                 margin: EdgeInsets.zero,
                 decoration: BoxDecoration(
                   color: Color(0xFFFF9000)
