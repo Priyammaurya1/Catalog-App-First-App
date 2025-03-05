@@ -1,0 +1,68 @@
+{
+    "Products": [
+        {
+            "id": 1,
+            "name": "Apple iPhone 12 Pro Max",
+            "desc": "Apple iPhone 12 Pro Max 256GB",
+            "price": 1099.99,
+            "color": "#544ee4",
+            "image": "https://i0.wp.com/www.jotek.ng/wp-content/uploads/2023/05/12-pro-max.jpg?fit=680%2C680&ssl=1"
+        },
+        {
+            "id": 2,
+            "name": "Samsung Galaxy S21 Ultra",
+            "desc": "Samsung Galaxy S21 Ultra 256GB",
+            "price": 1199.99,
+            "color": "#544ee4",
+            "image": "https://i0.wp.com/www.jotek.ng/wp-content/uploads/2023/05/s21-ultra.jpg?fit=680%2C680&ssl=1"
+        },
+        {
+            "id": 3,
+            "name": "Google Pixel 5",
+            "desc": "Google Pixel 5 128GB",
+            "price": 699.99,
+            "color": "#544ee4",
+            "image": "https://i0.wp.com/www.jotek.ng/wp-content/uploads/2023/05/pixel-5.jpg?fit=680%2C680&ssl=1"
+        },
+        {
+            "id": 4,
+            "name": "OnePlus 9 Pro",
+            "desc": "OnePlus 9 Pro 256GB",
+            "price": 969.99,
+            "color": "#544ee4",
+            "image": "https://i0.wp.com/www.jotek.ng/wp-content/uploads/2023/05/9-pro.jpg?fit=680%2C680&ssl=1"
+        },
+        {
+            "id": 5,
+            "name": "Xiaomi Mi 11 Ultra",
+            "desc": "Xiaomi Mi 11 Ultra 256GB",
+            "price": 899.99,
+            "color": "#544ee4",
+            "image": "https://i0.wp.com/www.jotek.ng/wp-content/uploads/2023/05/mi-11-ultra.jpg?fit=680%2C680&ssl=1"
+        },
+        {
+            "id": 6,
+            "name": "Sony Xperia 1 III",
+            "desc": "Sony Xperia 1 III 256GB",
+            "price": 1299.99,
+            "color": "#544ee4",
+            "image": "https://i0.wp.com/www.jotek.ng/wp-content/uploads/2023/05/xperia-1-iii.jpg?fit=680%2C680&ssl=1"
+        },
+        {
+            "id": 7,
+            "name": "LG Wing",
+            "desc": "LG Wing 256GB",
+            "price": 999.99,
+            "color": "#544ee4",
+            "image": "https://i0.wp.com/www.jotek.ng/wp-content/uploads/2023/05/lg-wing.jpg?fit=680%2C680&ssl=1"
+        },
+        {
+            "id": 8,
+            "name": "Motorola Edge+",
+            "desc": "Motorola Edge+ 256GB",
+            "price": 999.99,
+            "color": "#544ee4",
+            "image": "https://i0.wp.com/www.jotek.ng/wp-content/uploads/2023/05/edge-plus.jpg?fit=680%2C680&ssl=1"
+        }
+    ]
+}
