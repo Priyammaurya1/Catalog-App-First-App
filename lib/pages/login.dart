@@ -2,6 +2,8 @@ import 'package:coffee_card/utils/routes.dart';
 import 'package:flutter/material.dart';
 
 class LogInpage extends StatefulWidget {
+  const LogInpage({super.key});
+
   @override
   State<LogInpage> createState() => _LogInpageState();
 }

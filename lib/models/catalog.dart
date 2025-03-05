@@ -1,24 +1,34 @@
 class CatalogModel{
-  static final items =[
-  Item(
-    id: 345432,
-    name: "Apple iPhone 12 Pro Max",
-    desc: "Apple iPhone 12 Pro Max (256GB) - Pacific Blue",
-    price: "1,999",
-    color: "#33505a",
-    image: "https://i0.wp.com/www.jotek.ng/wp-content/uploads/2023/05/12-pro-max.jpg?fit=680%2C680&ssl=1")
-  ];
-
+  static List<Item> items = [];
 }
 class Item{
-  
   final int id;
   final String name;
   final String desc;
-  final String price;
+  final num price;
   final String color;
   final String image;
 
   Item({required this.id, required this.name, required this.desc, required this.price, required this.color, required this.image});
+
+  factory Item.fromMap(Map<String, dynamic> map){
+    return Item(
+      id: map["id"],
+      name: map["name"],
+      desc: map["desc"],
+      price: map["price"],
+      color: map["color"],
+      image: map["image"],
+      );
+  }
+
+  toMap() => {
+    "id": id,
+    "name": name,
+    "desc": desc,
+    "price": price,
+    "color": color,
+    "image": image,
+  };
   
 }
