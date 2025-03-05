@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:coffee_card/models/catalog.dart';
 import 'package:flutter/material.dart'; 
 import 'package:coffee_card/widgets/drawer.dart';
-import 'package:coffee_card/widgets/item_widget.dart';
 import 'package:flutter/services.dart';
 
 
@@ -50,15 +49,47 @@ class _HomePageState extends State<HomePage> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: (CatalogModel.items.isNotEmpty)
-        ? ListView.builder(
+        ? GridView.builder(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            mainAxisSpacing: 16,
+            crossAxisSpacing: 16,
+          ),
+          itemBuilder: (context, index){
+            final item = CatalogModel.items[index];
+            return Card(
+              clipBehavior: Clip.antiAlias,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: GridTile(
+                header: Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: Color(0xFFFF9000),
+                  ),
+                  child: Text(
+                    item.name,
+                    style: TextStyle(color: Colors.white),
+                    ),
+                ),
+                footer: Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: Colors.black,   //.withAlpha((0.6 * 255).toInt()),
+                  ),
+                  child: Text(
+                    item.price.toString(),
+                    style: TextStyle(color: Colors.white),
+                    ),
+                ),
+                child: Image.network(item.image),
+              ));
+          }, 
           itemCount: CatalogModel.items.length,
-          itemBuilder: (context, index) {
-            return ItemWidget(
-              item: CatalogModel.items[index]
-              );
-          },
-        ): Center(child: CircularProgressIndicator(),
-        )
+          )
+        : Center(child: CircularProgressIndicator(),
+        ),
       ),
       drawer: MyDrawer(),
     );
