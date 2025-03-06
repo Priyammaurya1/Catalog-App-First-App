@@ -107,7 +107,7 @@ class CatalogItem extends StatelessWidget {
     return VxBox(
       child: Row(
         children: [
-          catalogImage(
+          CatalogImage(
             image: catalog.image),
           Expanded(child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -142,8 +142,8 @@ class CatalogItem extends StatelessWidget {
   }
 }
 
-class catalogImage extends StatelessWidget {
-  const catalogImage({Key? key,required this.image,}) : super(key: key);
+class CatalogImage extends StatelessWidget {
+  const CatalogImage({Key? key,required this.image,}) : super(key: key);
   final String image;
 
   @override
