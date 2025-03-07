@@ -3,7 +3,7 @@ import 'package:coffee_card/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'utils/routes.dart';
 import 'widgets/themes.dart';
-
+import 'package:coffee_card/pages/cart_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => LogInpage(),
         MyRoutes.homeRoutes: (context) => HomePage(),
         MyRoutes.logInRoute: (context) => LogInpage(),
+        MyRoutes.cartRoutes: (context) => CartPage(),
       },
     );
   }

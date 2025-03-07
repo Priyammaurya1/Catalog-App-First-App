@@ -10,26 +10,28 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       backgroundColor: MyTheme.creamcolor,
       bottomNavigationBar: Container(
         color: Colors.white,
         child: OverflowBar(
-                      alignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        "\$${catalog.price}".text.bold.xl4.red800.make(),
-                        ElevatedButton(
-                          onPressed: () {},
-                          style: ButtonStyle(
-                            backgroundColor: WidgetStateProperty.all(
-                              MyTheme.darkBluishColor,
-                            ),
-                            shape: WidgetStateProperty.all(StadiumBorder()),
+                alignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      "\$${catalog.price}".text.bold.xl4.red800.make(),
+                      ElevatedButton(
+                        onPressed: () {},
+                        style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.all(
+                          MyTheme.darkBluishColor,
                           ),
-                          child: "Buy".text.bold.color(MyTheme.creamcolor).make(),
-                        ).wh(100,50),
-                      ],
-                    ).p24(),
+                        shape: WidgetStateProperty.all(StadiumBorder()),
+                      ),
+                    child: "Add to Cart".text.bold.color(MyTheme.creamcolor).make(),
+                   ).wh(130,50),
+                  ],
+                ).p24(),
       ),
       body: SafeArea(
         bottom: false,
@@ -50,7 +52,12 @@ class HomeDetailPage extends StatelessWidget {
                   child: Column(
                     children: [
                       catalog.name.text.xl4.color(MyTheme.darkBluishColor).bold.make(),
-                      catalog.desc.text.textStyle(context.captionStyle).xl.make(),
+                      catalog.desc.text.textStyle(context.captionStyle).xl.make(), 10.heightBox,
+                      "Dolore magna et ea tempor amet. Sit labore amet amet ipsum. Sit amet amet amet ipsum. Dolore magna et ea tempor amet. Sit labore amet amet ipsum. Sit amet amet amet ipsum."
+                      .text.textStyle(context.captionStyle).make()
+                      .p16(),
+                      
+
                     ],
                   ).py64()
                   ),

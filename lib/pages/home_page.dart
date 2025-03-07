@@ -1,8 +1,10 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
+import 'package:coffee_card/utils/routes.dart';
 import 'package:coffee_card/widgets/home_widgets/catalog_header.dart';
 import 'package:coffee_card/widgets/home_widgets/catalog_list.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:coffee_card/models/catalog.dart';
@@ -48,9 +50,16 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyTheme.creamcolor,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoutes),
+        backgroundColor: MyTheme.darkBluishColor,
+        child: Icon(CupertinoIcons.cart,
+        color: Colors.white,
+      )
+      ),
       body: SafeArea( 
         child: Container(
-          padding: Vx.m32,
+          padding: EdgeInsets.only(left: 32.0, right: 32.0, top: 32.0, bottom: 0.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:[ CatalogHeader(),
