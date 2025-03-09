@@ -44,25 +44,26 @@ class CatalogItem extends StatelessWidget {
         children: [
           Hero(
               tag: Key(catalog.id.toString()),
-            child: CatalogImage(image: catalog.image)),
+            child: CatalogImage(
+              image: catalog.image)),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                catalog.name.text.lg.color(MyTheme.darkBluishColor).bold.make(),
-                catalog.desc.text.textStyle(context.captionStyle).make(),
+                catalog.name.text.lg.color(context.theme.highlightColor).bold.make(),
+                catalog.desc.text.textStyle(context.captionStyle).color(context.theme.highlightColor).make(),
                 Padding(
                   padding: Vx.mOnly(right: 8.0),
                   child: OverflowBar(
                     alignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      "\$${catalog.price}".text.bold.xl.make(),
+                      "\$${catalog.price}".text.bold.xl.color(context.theme.highlightColor).make(),
                       ElevatedButton(
                         onPressed: () {},
                         style: ButtonStyle(
                           backgroundColor: WidgetStateProperty.all(
-                            MyTheme.darkBluishColor,
+                            context.theme.colorScheme.secondary,
                           ),
                           shape: WidgetStateProperty.all(StadiumBorder()),
                         ),
@@ -76,6 +77,6 @@ class CatalogItem extends StatelessWidget {
           ),
         ],
       ),
-    ).white.rounded.square(150).make().py16();
+    ).color(context.cardColor).rounded.square(150).make().py16();
   }
 }

@@ -8,7 +8,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:coffee_card/models/catalog.dart';
-import 'package:coffee_card/widgets/themes.dart';
+// import 'package:coffee_card/widgets/themes.dart';
 // import 'package:coffee_card/widgets/drawer.dart';
 import 'package:flutter/services.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -49,10 +49,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyTheme.creamcolor,
+      backgroundColor: context.canvasColor,
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoutes),
-        backgroundColor: MyTheme.darkBluishColor,
+        backgroundColor: Theme.of(context).colorScheme.secondary,  // for button color (cart)
         child: Icon(CupertinoIcons.cart,
         color: Colors.white,
       )

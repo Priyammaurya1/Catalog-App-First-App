@@ -13,9 +13,9 @@ class HomeDetailPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
-      backgroundColor: MyTheme.creamcolor,
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: OverflowBar(
                 alignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -24,7 +24,7 @@ class HomeDetailPage extends StatelessWidget {
                         onPressed: () {},
                         style: ButtonStyle(
                         backgroundColor: WidgetStateProperty.all(
-                          MyTheme.darkBluishColor,
+                          context.theme.colorScheme.secondary,
                           ),
                         shape: WidgetStateProperty.all(StadiumBorder()),
                       ),
@@ -47,14 +47,14 @@ class HomeDetailPage extends StatelessWidget {
                 arcType: VxArcType.convey,
                 edge: VxEdge.top,
                 child: Container(
-                  color: Colors.white,
+                  color: context.cardColor,
                   width: context.screenWidth,
                   child: Column(
                     children: [
-                      catalog.name.text.xl4.color(MyTheme.darkBluishColor).bold.make(),
-                      catalog.desc.text.textStyle(context.captionStyle).xl.make(), 10.heightBox,
+                      catalog.name.text.xl4.color(context.theme.highlightColor).bold.make(),
+                      catalog.desc.text.textStyle(context.captionStyle).color(context.theme.highlightColor).xl.make(), 10.heightBox,
                       "Dolore magna et ea tempor amet. Sit labore amet amet ipsum. Sit amet amet amet ipsum. Dolore magna et ea tempor amet. Sit labore amet amet ipsum. Sit amet amet amet ipsum."
-                      .text.textStyle(context.captionStyle).make()
+                      .text.textStyle(context.captionStyle).color(context.theme.highlightColor).align(TextAlign.center).make()
                       .p16(),
                     ],
                   ).py64()

@@ -1,5 +1,6 @@
 import 'package:coffee_card/utils/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class LogInpage extends StatefulWidget {
   const LogInpage({super.key});
@@ -39,7 +40,7 @@ class _LogInpageState extends State<LogInpage> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: context.canvasColor,
       child: SingleChildScrollView(
         child: Form(
           key: forKey,
@@ -49,7 +50,11 @@ class _LogInpageState extends State<LogInpage> {
               SizedBox(height: 20.0),
               Text(
                 "Welcome $name",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: context.theme.highlightColor,
+                ),
               ),
               SizedBox(height: 20.0),
               Padding(
@@ -96,7 +101,7 @@ class _LogInpageState extends State<LogInpage> {
                     ), // to give space between the text field and the button.
 
                     Material(
-                      color: Colors.deepPurple,
+                      color: context.theme.colorScheme.secondary,
                       borderRadius: BorderRadius.circular(
                         changeButton ? 50 : 8,
                       ),
