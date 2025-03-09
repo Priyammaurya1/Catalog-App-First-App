@@ -65,9 +65,14 @@ class _LogInpageState extends State<LogInpage> {
                 child: Column(
                   children: [
                     TextFormField(
-                      decoration: InputDecoration(
+                        decoration: InputDecoration(
                         hintText: "Enter UserName",
                         labelText: "UserName",
+                        hintStyle: TextStyle(color: context.theme.highlightColor),
+                        labelStyle: TextStyle(color: context.theme.highlightColor),
+                      ),
+                      style: TextStyle(
+                        color: context.theme.highlightColor,
                       ),
                       validator: (value) {
                         if (value!.isEmpty) {
@@ -85,8 +90,12 @@ class _LogInpageState extends State<LogInpage> {
                       decoration: InputDecoration(
                         hintText: "Enter Password",
                         labelText: "Password",
+                        hintStyle: TextStyle(color: context.theme.highlightColor),
+                        labelStyle: TextStyle(color: context.theme.highlightColor),
                       ),
-
+                      style: TextStyle(
+                        color: context.theme.highlightColor,
+                      ),
                       validator: (value) {
                         if (value!.isEmpty) {
                           return "Password cannot be empty";
