@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 
+
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
 
@@ -40,7 +41,9 @@ class _CartTotal extends StatelessWidget {
         children: [
         "\$9999".text.xl5.color(context.theme.highlightColor).make(),
         30.widthBox,
-        ElevatedButton(onPressed: (){},
+        ElevatedButton(onPressed: (){
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: "Buying not supported".text.make()));
+        },
         style: ButtonStyle(
           backgroundColor: WidgetStateProperty.all(
           context.theme.colorScheme.secondary)
