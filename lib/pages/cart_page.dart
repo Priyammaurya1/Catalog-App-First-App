@@ -45,7 +45,7 @@ class _CartTotal extends StatelessWidget {
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: "Buying not supported".text.make()));
         },
         style: ButtonStyle(
-          backgroundColor: WidgetStateProperty.all(
+          backgroundColor: MaterialStateProperty.all(
           context.theme.colorScheme.secondary)
         ),
         child: "Buy".text.white.make()
