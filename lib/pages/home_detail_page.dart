@@ -1,5 +1,5 @@
 import 'package:coffee_card/models/catalog.dart';
-import 'package:coffee_card/widgets/themes.dart';
+import 'package:coffee_card/widgets/home_widgets/add_to_cart.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -20,16 +20,7 @@ class HomeDetailPage extends StatelessWidget {
                 alignment: MainAxisAlignment.spaceBetween,
                     children: [
                       "\$${catalog.price}".text.bold.xl4.red800.make(),
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ButtonStyle(
-                        backgroundColor: WidgetStateProperty.all(
-                          context.theme.colorScheme.secondary,
-                          ),
-                        shape: WidgetStateProperty.all(StadiumBorder()),
-                      ),
-                    child: "Add to Cart".text.bold.color(MyTheme.creamcolor).make(),
-                   ).wh(130,50),
+                      AddToCart(catalog: catalog,).wh(130,50),
                   ],
                 ).p24(),
       ),
