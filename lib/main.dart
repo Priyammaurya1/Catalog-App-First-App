@@ -1,5 +1,5 @@
 import 'package:coffee_card/pages/home_page.dart';
-import 'package:coffee_card/pages/login.dart';
+import 'package:coffee_card/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'utils/routes.dart';
 import 'widgets/themes.dart';
@@ -18,11 +18,11 @@ class MyApp extends StatelessWidget {
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
-      initialRoute: MyRoutes.homeRoutes,
+      initialRoute: "/",
       routes: {
-        "/": (context) => LogInpage(),
+        "/": (context) => const LoginPage(),
         MyRoutes.homeRoutes: (context) => HomePage(),
-        MyRoutes.logInRoute: (context) => LogInpage(),
+        MyRoutes.logInRoute: (context) => const LoginPage(),
         MyRoutes.cartRoutes: (context) => CartPage(),
       },
     );

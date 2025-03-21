@@ -86,12 +86,13 @@ class _LogInpageState extends State<LogInpage> {
                       },
                     ),
                     TextFormField(
-                      obscureText: true, // to hide the password.
+                      obscureText: true,
                       decoration: InputDecoration(
-                        hintText: "Enter Password",
-                        labelText: "Password",
+                        hintText: "Enter Password (min 6 characters)",
+                        labelText: "Password *", 
                         hintStyle: TextStyle(color: context.theme.highlightColor),
                         labelStyle: TextStyle(color: context.theme.highlightColor),
+                        errorStyle: TextStyle(color: Colors.red),
                       ),
                       style: TextStyle(
                         color: context.theme.highlightColor,
